@@ -17,11 +17,11 @@ test('get started link', async ({ page }) => {
   await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
 });
 
-test('google test', async ({})=> {
+test('google test', async ({page})=> {
 
 //  let browser : Browser = await chromium.launch({channel: 'chrome', headless : false});//open browser
-  let browser: Browser = await webkit.launch({ headless: false });
-  let page: Page = await browser.newPage();//open new page
+  // let browser: Browser = await webkit.launch({ headless: false });
+  // let page: Page = await browser.newPage();//open new page
   await page.goto('https://www.google.co.in/');//enter the url
   let title : string = await page.title();//get the title
   console.log(title);
