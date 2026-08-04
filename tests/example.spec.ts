@@ -1,4 +1,4 @@
-import { test, expect, Page, chromium, Browser } from '@playwright/test';
+import { test, expect, Page, chromium, Browser, webkit } from '@playwright/test';
 
 test('has title', async ({ page }) => {
   await page.goto('https://playwright.dev/');
@@ -19,7 +19,8 @@ test('get started link', async ({ page }) => {
 
 test('google test', async ({})=> {
 
-  let browser : Browser = await chromium.launch({channel: 'chrome', headless : false});//open browser
+//  let browser : Browser = await chromium.launch({channel: 'chrome', headless : false});//open browser
+  let browser: Browser = await webkit.launch({ headless: false });
   let page: Page = await browser.newPage();//open new page
   await page.goto('https://www.google.co.in/');//enter the url
   let title : string = await page.title();//get the title
