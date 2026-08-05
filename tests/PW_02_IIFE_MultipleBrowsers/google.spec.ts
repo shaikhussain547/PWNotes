@@ -10,6 +10,7 @@ test('google test', async ({})=> {
     let pageUrl: string = page.url();//get the url
     console.log(pageUrl);
     await page.waitForTimeout(3000);
+    // await page.pause();
 });
 
 
