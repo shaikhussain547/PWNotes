@@ -29,10 +29,13 @@ test('register page test', async ({page})=> {
 2. Accessbility Role/ Semantic Based Locators : 1st choice
 
 getBy method
---getByRole
---getByPlaceholder
---getByText
---getByAlt
+--getByRole --> 1
+--getByPlaceholder --> 1,2
+--getByText --> 2
+--getByAlt --> 3 (for Images)
+--getByTestId ---> 2/3
+--getByLabel - form text box --> 3
+--getByTitle --> 4
 
 create a locator + action (fill,click, isVisible, etc.,)
 
